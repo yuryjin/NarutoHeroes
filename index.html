@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Konoha</title>
+<head>
+  <meta charset="utf-8">
+  <title>Random pictures</title>
+  <script src="script.js"></script>
+  <link rel="shortcut icon" href="">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="style.css">
-
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-
-  </head>
-  <body>
+  <link rel="stylesheet" href="style.css">
 
 
 
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+  <div class="jumbotron bg-purple text-white" id="backimage">
+
+      <div class="row">
+        <div class="col-md-4">
+          <img height="500" width="500" src="https://vignette.wikia.nocookie.net/skillnaruto/images/9/97/Naruto_Part_1.png/revision/latest/scale-to-width-down/1000?cb=20160201100004&path-prefix=ru" alt="" id="image">
+
+        </div>
+        <div class="col-md-4">
+          <p style="background:teal" id="text_describe">Наруто Узумаки (яп. うずまきナルト, Удзумаки Наруто) — шиноби Деревни Скрытого Листа. В день своего рождения он стал джинчуурики Девятихвостого Демона-Лиса — судьба,
+            из-за которой он стал изгоем для большей части людей в Конохе на протяжении всего своего детства. После присоединения к команде Какаши, Наруто упорно трудился, чтобы
+             получить признание всех в деревне и исполнить свою заветную мечту стать Хокаге. В последующие годы, благодаря многим трудностям и испытаниям, он стал способным ниндзя,
+             которого считали героем Конохагакуре, и после во всем мире, он стал известен как Герой Скрытого Листа (яп. 木 ノ 葉 隠 れ の 英雄, Конохагакуре но Эйю). Вскоре, он оказался одним
+             из ключевых факторов победы в Четвертой Мировой Войне Шиноби, что в конце-концов привело его к достижению своей мечты, когда он стал Седьмым Хокаге (яп. 七 代 目 火影, Буквальное значение:
+             Тень Огня Седьмого Поколения). </p>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-primary btn-lg" id="image1" onclick="changeTo1();">Наруто </button> <br><br><br>
+          <button class="btn btn-primary btn-lg" id="image2" onclick="changeTo2();">Саске</button> <br><br><br>
+          <button class="btn btn-primary btn-lg" id="image3" onclick="changeTo3();">Итачи </button> <br><br><br>
+          <button class="btn btn-primary btn-lg" id="image4" onclick="changeTo4();">Сакура  </button> <br><br><br>
+        </div>
+      </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
 
 
 
@@ -29,16 +50,42 @@
 
 
 
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script>
+    function changeTo1(){
+      var picture = document.getElementById("image");
+      var texto = document.getElementById("text_describe");
+      picture.src =  "https://vignette.wikia.nocookie.net/skillnaruto/images/9/97/Naruto_Part_1.png/revision/latest/scale-to-width-down/1000?cb=20160201100004&path-prefix=ru";
+      texto.innerHTML = "Наруто Узумаки (яп. うずまきナルト, Удзумаки Наруто) — шиноби Деревни Скрытого Листа. В день своего рождения он стал джинчуурики Девятихвостого Демона-Лиса — судьба, из-за которой он стал изгоем для большей части людей в Конохе на протяжении всего своего детства. После присоединения к команде Какаши, Наруто упорно трудился, чтобы получить признание всех в деревне и исполнить свою заветную мечту стать Хокаге. В последующие годы, благодаря многим трудностям и испытаниям, он стал способным ниндзя, которого считали героем Конохагакуре, и после во всем мире, он стал известен как Герой Скрытого Листа (яп. 木 ノ 葉 隠 れ の 英雄, Конохагакуре но Эйю). Вскоре, он оказался одним из ключевых факторов победы в Четвертой Мировой Войне Шиноби, что в конце-концов привело его к достижению своей мечты, когда он стал Седьмым Хокаге (яп. 七 代 目 火影, Буквальное значение: Тень Огня Седьмого Поколения). "
+    }
+    function changeTo2(){
+      var picture = document.getElementById("image");
+      var texto = document.getElementById("text_describe");
+      picture.src =  "https://vignette.wikia.nocookie.net/skillnaruto/images/2/21/Sasuke_Part_1.png/revision/latest?cb=20160202114409&path-prefix=ru";
+      texto.innerHTML = "Саске Учиха (яп. うちはサスケ, Учиха Саске) — один из последних выживших членов клана Учиха из Деревни Скрытого Листа. После того, как его старший брат Итачи вырезал весь их клан, Саске поставил перед собой жизненную цель отомстить за клан и семью, убив Итачи. Он попадает в Команду 7, когда становится ниндзя, и благодаря состязаниям со своим соперником и лучшим другом, Наруто Узумаки, начинает оттачивать свои навыки. Недовольный своим прогрессом, он покидает Лист, чтобы обрести силу, необходимую для осуществления мести. Годы, проведённые в поисках мести, стали невероятно взыскательными и неразумными, равно как и изолировали его от других, из-за чего он вскоре становится международным преступником. После того, как Саске сыграл одну из ключевых ролей в окончании Четвёртой Мировой Войны Шиноби, а Наруто смог избавить его от ненависти, он решает вернуться в Скрытый Лист и посвящает свою жизнь защите деревни и её жителей — таким образом, он становится известен под прозвищем 'Поддерживающий Каге' (яп. 支う影, Сасаукагэ, Буквальное значение: Поддерживающая Тень). "
+    }
+    function changeTo3(){
+      var picture = document.getElementById("image");
+      var texto = document.getElementById("text_describe");
+      picture.src =  "https://vignette.wikia.nocookie.net/naruto/images/b/bb/Itachi.png/revision/latest?cb=20160125182202";
+      texto.innerHTML = "Итачи Учиха (яп. うちは イタチ, У́чиха Ита́чи) был гением клана Учиха из Скрытого Листа. Он стал международным преступником, уничтожив весь свой клан, пощадил же он лишь своего младшего брата Саске. Впоследствии Итачи присоединился к международной преступной организации, Акацуки, деятельность которой порой приводила его к конфликтам с ниндзя Листа, включая Саске, стремящегося отомстить за свой клан. После смерти Итачи, выяснилось, что его мотивы были куда более сложными, чем казалось изначально — все его действия были направлены на благо Саске и Конохи, и он оставался предан Скрытому Листу до самого конца. "
+    }
+    function changeTo4(){
+      var picture = document.getElementById("image");
+      var texto = document.getElementById("text_describe");
+      picture.src =  "https://images5.alphacoders.com/644/thumb-1920-644141.jpg";
+      texto.innerHTML = "Сакура Учиха (яп. うちはサクラ, Учиха Сакура, урождённая Харуно (яп. 春野)) — куноичи из Скрытого Листа. Став частью Команды 7, Сакура быстро осознаёт свою неподготовленность к суровой жизни шиноби. Тем не менее, после прохождения тренировок под руководством Саннина Цунаде, она преодолевает это и становится одним из величайших ниндзя-медиков в мире. "
+    }
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script>
-      $(document).ready (function (){
-        $('[data-toggle="tooltip"]').tooltip ();
-      });
-    </script>
-  </body>
+
+
+
+  </script>
+
+
+</body>
 </html>
